@@ -26,6 +26,7 @@ class MapInitialize  {
                 url: Cesium.IonResource.fromAssetId(21513)
             })
         );
+
         this.viewer.zoomTo(tileset);
         setTimeout(this.checkLoad, 2000);
     }
@@ -40,7 +41,7 @@ class MapInitialize  {
                 document.getElementById("loading-overlay").style.display = "none";
             }
             else {
-                setTimeout(checkLoad, 100);
+                setTimeout(this.checkLoad, 100);
             }
         }
     }
