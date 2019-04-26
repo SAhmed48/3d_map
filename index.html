@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>3d Mapping serve</title>
+  <meta charset="utf-8">
+  <link href="css/main.css" rel="stylesheet">
+  <script src="lib/viewerCesiumNavigationMixin.js"></script>
+  <script src="https://cesiumjs.org/releases/1.56.1/Build/Cesium/Cesium.js"></script>
+  <link href="https://cesiumjs.org/releases/1.56.1/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+</head>
+<body>
+  <div id="Container"></div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/map.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        let mapObj = new MapInitialize();
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+html, body, #cesiumContainer {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.cesium-viewer-bottom, 
+.cesium-animation-shuttleRingG,
+.cesium-viewer-animationContainer, 
+.cesium-button cesium-toolbar-button
+{
+    display: none !important;
+}
