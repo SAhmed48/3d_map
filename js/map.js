@@ -23,27 +23,18 @@ class MapInitialize  {
     loadTileSet(){
         let tileset = this.viewer.scene.primitives.add(
             new Cesium.Cesium3DTileset({
-                url: Cesium.IonResource.fromAssetId(21513)
+                url: Cesium.IonResource.fromAssetId(21513),
+                skipLevelOfDetail : true,
+                baseScreenSpaceError : 1024,
+                skipScreenSpaceErrorFactor : 16,
+                skipLevels : 1,
+                immediatelyLoadDesiredLevelOfDetail : false,
+                loadSiblings : false,
+                cullWithChildrenBounds : true
             })
         );
 
         this.viewer.zoomTo(tileset);
-        setTimeout(this.checkLoad, 2000);
-    }
-
-    checkLoad() {
-        if (!this.loaded) {
-            var numTiles = this.viewer.scene.globe._surface._tileLoadQueue.length;
-            console.log(numTiles);
-            if (numTiles === 0) {
-                this.loaded = true;
-                // Hide the loading overlay.
-                document.getElementById("loading-overlay").style.display = "none";
-            }
-            else {
-                setTimeout(this.checkLoad, 100);
-            }
-        }
     }
 
 }
