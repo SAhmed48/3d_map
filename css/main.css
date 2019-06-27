@@ -26,3 +26,7 @@ html, body, #cesiumContainer {
     background-position: center;
     opacity: 1;
 }
+
+.navigation-controls, .cesium-viewer-toolbar{
+display:none !important;
+}
